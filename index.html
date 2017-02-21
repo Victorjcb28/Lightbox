@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<link rel="stylesheet" href="estilos.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+    
+    $('.galeria__img').click(function(e){
+  		var img = e.target.src;
+  		var modal = '<div class="modal" id="modal"><img src="'+ img + '" class="modal__img"><div class="modal__boton" id="modal__boton">X</div></div>';
+  		$('body').append(modal);
+  		$('#modal__boton').click(function(){
+    	$('#modal').remove();
+  		})
+	});
+
+ 	$(document).keyup(function(e){
+ 		if (e.which==27) {
+    	$('#modal').remove();
+  	}
+	})
+
+
+});
+
+</script>
+
+</head>
+<body>
+
+
+
+
+<ul class="galeria">
+      <li class="galeria__item"><img src="http://www.todosfondos.net/img(1024x768)/Animales/Lobos/Wallpapers%20Lobos.jpg" class="galeria__img"></li>
+      <li class="galeria__item"><img src="http://www.gifs-animados.es/wallpapers/wallpapers/aviones-de-combate/wallpaper-aviones-de-combate-0149635.jpg" class="galeria__img"></li>
+      <li class="galeria__item"><img src="http://crazy-frankenstein.com/free-wallpapers-files/nature-wallpapers/deserts-wallpapers/bad-moon-rising-desert-wallpaper.jpg" class="galeria__img"></li>
+      <li class="galeria__item"><img src="http://www.fondosgratis.mx/imagenItem/14371/1024/wallpaper-2206020jjpeg" class="galeria__img"></li>
+      <li class="galeria__item"><img src="http://tuswallpapersgratis.com/wp-content/uploads/2014/02/alpinista-wallpaper-666006.jpeg" class="galeria__img"></li>
+      <li class="galeria__item"><img src="https://rubenvdj.files.wordpress.com/2010/01/paisajes-wallpapers-7.jpg" class="galeria__img"></li>
+      <li class="galeria__item"><img src="http://2.bp.blogspot.com/--Aq5Scfk3AM/TZjyAyDcsvI/AAAAAAAAAG8/GtcylEutxws/s1600/vista-wallpaper-aero-woods.jpg" class="galeria__img"></li>
+      <li class="galeria__item"><img src="http://es.naturewallpaperfree.com/cielo/wallpaper-naturaleza-1024x768-4126-f2509761.jpg" class="galeria__img"></li>
+    </ul>
+
+
+	
+</body>
+</html>
